@@ -1,0 +1,4 @@
+name: gymmate
+packages:
+  - packages/*
+  - packages/feature/**
