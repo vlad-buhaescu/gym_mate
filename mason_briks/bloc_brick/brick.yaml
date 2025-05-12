@@ -1,0 +1,6 @@
+name: bloc_brick
+description: Generates a Flutter BLoC with event, state, bloc, and page
+vars:
+  name:
+    type: string
+    description: The base name of the feature (e.g. login, profile)
