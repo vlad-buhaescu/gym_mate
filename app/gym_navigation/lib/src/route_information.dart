@@ -6,4 +6,4 @@ RouteInformationProvider get routeInformationProvider =>
     router.routeInformationProvider;
 RouteInformationParser<Object> get routeInformationParser =>
     router.routeInformationParser;
-RouterDelegate get routerDelegate => router.routerDelegate;
+RouterDelegate<Object> get routerDelegate => router.routerDelegate;
