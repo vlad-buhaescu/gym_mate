@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  gym_navigation:
+    path: ../gym_navigation
 
 dev_dependencies:
   flutter_test:
