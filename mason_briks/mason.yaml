@@ -1,0 +1,3 @@
+bricks:
+  hello_brick:
+    path: ./hello_brick
