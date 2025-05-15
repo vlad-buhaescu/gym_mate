@@ -1,0 +1,17 @@
+name: gym_navigation
+description: Navigation for Gym app
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get_it: ^8.0.3
+  go_router: ^14.6.2
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
