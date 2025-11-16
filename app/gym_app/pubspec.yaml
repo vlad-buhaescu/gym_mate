@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  workout:
+    path: ../../feature/workout
 
 dev_dependencies:
   flutter_test:
