@@ -1,4 +1,4 @@
-abstract class WorkoutState {}
+sealed class WorkoutState {}
 
 class WorkoutInitial extends WorkoutState {}
 
