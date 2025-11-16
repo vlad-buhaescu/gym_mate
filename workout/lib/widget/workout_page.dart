@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:workout/widget/bloc/workout_bloc.dart';
+import 'package:workout/widget/bloc/workout_event.dart';
+import 'package:workout/widget/bloc/workout_state.dart';
+
+class WorkoutPage extends StatelessWidget {
+  const WorkoutPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (_) => WorkoutBloc()..add(LoadWorkout()),
+      child: Scaffold(
+        appBar: AppBar(title: const Text('Workout')),
+        body: BlocBuilder<WorkoutBloc, WorkoutState>(
+          builder: (context, state) {
+            if (state is WorkoutLoading) {
+              return const Center(child: CircularProgressIndicator());
+            } else if (state is WorkoutLoaded) {
+              return Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    context.read<WorkoutBloc>().add(StartWorkout());
+                  },
+                  child: const Text('Start Workout'),
+                ),
+              );
+            } else if (state is WorkoutStarted) {
+              return const Center(child: Text('Workout Started!'));
+            }
+            return const Center(child: Text('Welcome to Workout'));
+          },
+        ),
+      ),
+    );
+  }
+}
