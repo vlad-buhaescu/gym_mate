@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:workout/widget/workout_page.dart';
+import 'package:workout/widget/workout/workout_page.dart';
 
 void main() {
   runApp(const MainApp());
