@@ -17,6 +17,10 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^5.0.0
   melos: ^6.3.2
+  test_feat:
+    path: ../../feature/test_feat
+  gym_navigation:
+    path: ../../app/gym_navigation
 
 flutter:
   uses-material-design: true
