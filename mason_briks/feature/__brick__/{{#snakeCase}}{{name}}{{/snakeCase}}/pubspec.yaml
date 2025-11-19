@@ -1,0 +1,44 @@
+name: {{#snakeCase}}{{name}}{{/snakeCase}}
+description: {{#titleCase}}{{name}}{{/titleCase}} Feature
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+  flutter: ">=3.7.7"
+
+dependencies:
+  api_client:
+    path: {{{nesting}}}/core/api_client
+  design_system:
+    path: {{{nesting}}}/core/design_system
+  feature_flow:
+    path: {{{nesting}}}/utility/feature_flow
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.0
+  freezed_annotation: ^2.2.0
+  get_it: ^8.0.3
+  ghimi_di:
+    path: {{{nesting}}}/utility/ghimi_di
+  i18n:
+    path: {{{nesting}}}/core/i18n
+  injectable: ^2.1.0
+  json_annotation: ^4.8.0
+  prelude:
+    path: {{{nesting}}}/utility/prelude
+  retrofit: ^4.0.1
+
+dev_dependencies:
+  bdd_widget_test: ^1.4.3
+  build_runner: ^2.4.15
+  flutter_test:
+    sdk: flutter
+  freezed: ^2.3.2
+  injectable_generator: ^2.1.4
+  json_serializable: ^6.6.1
+  mocktail: ^1.0.4
+  retrofit_generator: ^9.1.9
+
+flutter:
+  uses-material-design: true
