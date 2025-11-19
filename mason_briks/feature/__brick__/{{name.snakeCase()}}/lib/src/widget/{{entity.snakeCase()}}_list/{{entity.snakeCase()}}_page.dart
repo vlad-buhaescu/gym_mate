@@ -8,8 +8,8 @@ import 'package:{{name.snakeCase()}}/src/widget/{{entity.snakeCase()}}_list/bloc
 import 'package:{{name.snakeCase()}}/src/widget/{{entity.snakeCase()}}_list/bloc/{{entity.snakeCase()}}_event.dart';
 import 'package:{{name.snakeCase()}}/src/widget/{{entity.snakeCase()}}_list/localization/{{entity.snakeCase()}}_localizations.dart';
 
-class {{entity.pascalCase()}}ListPage extends StatelessWidget {
-  const {{entity.pascalCase()}}ListPage({super.key});
+class {{entity.pascalCase()}}Page extends StatelessWidget {
+  const {{entity.pascalCase()}}Page({super.key});
 
   @override
   Widget build(BuildContext context) => Scaffold(
