@@ -2,7 +2,6 @@ import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:{{name.snakeCase()}}/src/di/di_initializer.dart';
 import 'package:{{name.snakeCase()}}/src/flow/{{name.snakeCase()}}_state.dart';
-import 'package:{{name.snakeCase()}}/src/widget/{{entity.snakeCase()}}_details/{{entity.snakeCase()}}_details_page.dart';
 import 'package:{{name.snakeCase()}}/src/widget/{{entity.snakeCase()}}_list/{{entity.snakeCase()}}_list_page.dart';
 import 'package:{{name.snakeCase()}}/src/widget/{{entity.snakeCase()}}_list/localization/{{entity.snakeCase()}}_localizations.dart';
 
@@ -32,14 +31,8 @@ class _{{name.pascalCase()}}FlowState extends State<{{name.pascalCase()}}Flow> {
         delegates: const [{{entity.pascalCase()}}Localizations.delegate],
         child: FlowBuilder<{{name.pascalCase()}}State>(
           state: const {{name.pascalCase()}}State(),
-          onGeneratePages: (state, pages) => [
-            const MaterialPage(child: {{entity.pascalCase()}}ListPage()),
-            if (state.selected{{entity.pascalCase()}} != null)
-              MaterialPage(
-                child: {{entity.pascalCase()}}DetailsPage(
-                  {{entity.camelCase()}}: state.selected{{entity.pascalCase()}}!,
-                ),
-              ),
+          onGeneratePages: (state, pages) => const [
+            MaterialPage(child: {{entity.pascalCase()}}ListPage()),
           ],
         ),
       );

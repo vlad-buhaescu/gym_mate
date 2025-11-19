@@ -23,11 +23,14 @@ class {{entity.pascalCase()}}ListPage extends StatelessWidget {
             builder: (context, state) => ListView.builder(
               itemBuilder: (context, index) => ListTile(
                 title: Text(state.{{entityPlural.camelCase()}}[index].name),
-                onTap: () => context.flow<{{name.pascalCase()}}State>().update(
-                      (flowState) => flowState.copyWith(
-                        selected{{entity.pascalCase()}}: state.{{entityPlural.camelCase()}}[index],
-                      ),
+                onTap: () {
+                  final flow = context.flow<{{name.pascalCase()}}State>();
+                  flow.complete(
+                    flow.state.copyWith(
+                      selected{{entity.pascalCase()}}: state.{{entityPlural.camelCase()}}[index],
                     ),
+                  );
+                },
               ),
               itemCount: state.{{entityPlural.camelCase()}}.length,
             ),

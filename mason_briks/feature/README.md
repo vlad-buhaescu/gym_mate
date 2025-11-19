@@ -17,6 +17,10 @@ Scaffolds a feature package that mirrors the structure of the existing `harry_po
 
 ## Usage
 
+mason make feature \
+  --name test_feat \
+  --output-dir /Users/vladbuhaescu/Documents/Developement/portofolio/gym_tracker_app/feature
+
 ```bash
 mason make feature \
   --name harry_potter \
