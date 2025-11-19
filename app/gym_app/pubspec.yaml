@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  gym_navigation:
+    path: ../gym_navigation
 
 dev_dependencies:
   flutter_test:
@@ -17,8 +19,6 @@ dev_dependencies:
   melos: ^6.3.2
   test_feat:
     path: ../../feature/test_feat
-  gym_navigation:
-    path: ../../app/gym_navigation
 
 flutter:
   uses-material-design: true
