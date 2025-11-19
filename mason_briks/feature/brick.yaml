@@ -1,0 +1,24 @@
+name: feature
+description: Scaffold a feature package modeled after the harry_potter module.
+version: 0.1.0+1
+environment:
+  mason: ">=0.1.0 <1.0.0"
+
+vars:
+  name:
+    type: string
+    description: Package/feature name (snake_case recommended, e.g., harry_potter)
+    default: sample_feature
+  entity:
+    type: string
+    description: Singular domain entity (e.g., character)
+    default: item
+  entityPlural:
+    type: string
+    description: Plural domain entity (e.g., characters)
+    default: items
+  promptText:
+    type: string
+    description: Prompt shown on the list page/app bar (e.g., Choose a character)
+    default: Choose an item
+
