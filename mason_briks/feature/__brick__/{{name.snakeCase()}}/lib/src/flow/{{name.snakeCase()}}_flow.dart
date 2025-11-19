@@ -21,7 +21,6 @@ class _{{name.pascalCase()}}FlowState extends State<{{name.pascalCase()}}Flow> {
 
   @override
   void dispose() {
-    deinitialize();
     super.dispose();
   }
 
