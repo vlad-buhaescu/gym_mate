@@ -11,12 +11,12 @@ vars:
     default: sample_feature
   entity:
     type: string
-    description: Singular domain entity (e.g., character)
-    default: item
+    description: Singular domain entity (defaults to feature name if not provided)
+    default: sample_feature
   entityPlural:
     type: string
-    description: Plural domain entity (e.g., characters)
-    default: items
+    description: Plural domain entity (defaults to feature name + 's' if not provided)
+    default: sample_features
   promptText:
     type: string
     description: Prompt shown on the list page/app bar (e.g., Choose a character)
